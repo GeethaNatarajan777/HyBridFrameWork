@@ -1,0 +1,12 @@
+2021-01-02 23:51:51,660 [main] INFO Com.Baseclass.library - *******Starting with Browser Set Up*********
+2021-01-02 23:52:36,758 [main] INFO Com.Baseclass.library - Launched the cucumber Application
+2021-01-02 23:52:36,803 [main] INFO Com.Baseclass.library - Launched the chrome Application
+2021-01-02 23:52:39,066 [main] INFO Com.Baseclass.library - Entered username and password
+2021-01-02 23:52:43,493 [main] INFO Com.Baseclass.library - Exiting the application and closing the browser
+2021-01-02 23:52:43,494 [main] INFO Com.Baseclass.library - Take screenshot and closing the browser
+2021-01-03 00:01:53,440 [main] INFO Com.Baseclass.library - *******Starting with Browser Set Up*********
+2021-01-03 00:02:10,961 [main] INFO Com.Baseclass.library - Launched the cucumber Application
+2021-01-03 00:02:10,965 [main] INFO Com.Baseclass.library - Launched the chrome Application
+2021-01-03 00:02:13,550 [main] INFO Com.Baseclass.library - Entered username and password
+2021-01-03 00:02:18,164 [main] INFO Com.Baseclass.library - Exiting the application and closing the browser
+2021-01-03 00:02:18,166 [main] INFO Com.Baseclass.library - Take screenshot and closing the browser
