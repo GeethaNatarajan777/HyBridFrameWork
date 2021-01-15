@@ -43,7 +43,8 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+						<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
 		<span class='report-name'>ExtentReports</span>
@@ -52,7 +53,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Jan 6, 2021 05:41:28 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Jan 12, 2021 12:26:51 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -67,7 +68,9 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -113,7 +116,7 @@
                     <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -124,12 +127,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>2</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>3</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -140,12 +143,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>10</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>15</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='6.667%'>1</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='26.667%'>4</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='26.667%'>0</span> others
                 </div>
             </div>
         </div>
@@ -163,11 +166,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf skip' status='skip' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>To test the facebook application.</span>
-						<span class='test-time'>Jan 6, 2021 05:41:30 PM</span>
-						<span class='test-status right skip'>skip</span>
+						<span class='test-time'>Jan 12, 2021 12:26:54 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -176,85 +179,156 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario outline node' test-id='2' status='skip'>
-	<span class='duration right label'>0h 0m 0s+153ms</span>
+<div class='scenario outline node' test-id='2' status='fail'>
+	<span class='duration right label'>0h 2m 15s+664ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span> Scenario Outline: To test the login funtionality of facebook application.</div>
+		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario Outline: To test the login funtionality of facebook application.</div>
 		<table class='runtime-table table-striped table'><tr><td>Username</td><td>Password</td></tr><tr><td>sakthi</td><td>123</td></tr><tr><td>gerry</td><td>456</td></tr><tr><td>geetha</td><td>789</td></tr></table>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node scenario skip' status='skip'>
-			<div class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>To test the login funtionality of facebook application.</div>
+		<li test-id='3' class='node scenario fail' status='fail'>
+			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>To test the login funtionality of facebook application.</div>
 			<ul class='gc steps'>
-				<li test-id='4' class='gc given skip' status='skip'>
-					<h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given To enter URL and navigate to application.</h6>
-					<div class="node-step">Step undefined</div>
+				<li test-id='4' class='gc given fail' status='fail'>
+					<h6 class="step-name" title="Com.Step.LoginStepDef.to_enter_URL_and_navigate_to_application()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Given To enter URL and navigate to application.</h6>
+					<textarea disabled class="code-block">org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-DD3GB8N', ip: '192.168.43.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at Com.Baseclass.library.browserSetUp(library.java:52)
+	at Com.Step.LoginStepDef.to_enter_URL_and_navigate_to_application(LoginStepDef.java:16)
+	at ✽.To enter URL and navigate to application.(file:///C:/Users/Geetha%20Natarajan/git/HyBridFrameWork/HybridSeleniumCucumber1/src/test/resources/Features/testcase.feature:4)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:16034/status] to be available after 20033 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at Com.Baseclass.library.browserSetUp(library.java:52)
+	at Com.Step.LoginStepDef.to_enter_URL_and_navigate_to_application(LoginStepDef.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:67)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 48 more
+</textarea>
 				</li>
 				<li test-id='5' class='gc when skip' status='skip'>
-					<h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When To enter "sakthi" and "123".</h6>
-					<div class="node-step">Step undefined</div>
+					<h6 class="step-name" title="Com.Step.LoginStepDef.to_enter_and(java.lang.String,java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When To enter "sakthi" and "123".</h6>
+					<div class="node-step">Step skipped</div>
 				</li>
 				<li test-id='6' class='gc then skip' status='skip'>
-					<h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then click the submit button.</h6>
-					<div class="node-step">Step undefined</div>
+					<h6 class="step-name" title="Com.Step.LoginStepDef.click_the_submit_button()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then click the submit button.</h6>
+					<div class="node-step">Step skipped</div>
 				</li>
 				<li test-id='7' class='gc and skip' status='skip'>
-					<h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And To test screenshot.</h6>
-					<div class="node-step">Step undefined</div>
+					<h6 class="step-name" title="Com.Step.LoginStepDef.to_test_screenshot()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And To test screenshot.</h6>
+					<div class="node-step">Step skipped</div>
 				</li>
 				<li test-id='8' class='gc then skip' status='skip'>
-					<h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Close the browser.</h6>
-					<div class="node-step">Step undefined</div>
+					<h6 class="step-name" title="Com.Step.LoginStepDef.close_the_browser()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Close the browser.</h6>
+					<div class="node-step">Step skipped</div>
 				</li>
 			</ul>
 		</li>
-		<li test-id='9' class='node scenario skip' status='skip'>
-			<div class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>To test the login funtionality of facebook application.</div>
+		<li test-id='9' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>To test the login funtionality of facebook application.</div>
 			<ul class='gc steps'>
-				<li test-id='10' class='gc given skip' status='skip'>
-					<h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given To enter URL and navigate to application.</h6>
-					<div class="node-step">Step undefined</div>
+				<li test-id='10' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="Com.Step.LoginStepDef.to_enter_URL_and_navigate_to_application()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given To enter URL and navigate to application.</h6>
+					<div class="node-step"></div>
 				</li>
-				<li test-id='11' class='gc when skip' status='skip'>
-					<h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When To enter "gerry" and "456".</h6>
-					<div class="node-step">Step undefined</div>
+				<li test-id='11' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="Com.Step.LoginStepDef.to_enter_and(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When To enter "gerry" and "456".</h6>
+					<div class="node-step"></div>
 				</li>
-				<li test-id='12' class='gc then skip' status='skip'>
-					<h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then click the submit button.</h6>
-					<div class="node-step">Step undefined</div>
+				<li test-id='12' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="Com.Step.LoginStepDef.click_the_submit_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then click the submit button.</h6>
+					<div class="node-step"></div>
 				</li>
-				<li test-id='13' class='gc and skip' status='skip'>
-					<h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And To test screenshot.</h6>
-					<div class="node-step">Step undefined</div>
+				<li test-id='13' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="Com.Step.LoginStepDef.to_test_screenshot()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And To test screenshot.</h6>
+					<div class="node-step"></div>
 				</li>
-				<li test-id='14' class='gc then skip' status='skip'>
-					<h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Close the browser.</h6>
-					<div class="node-step">Step undefined</div>
+				<li test-id='14' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="Com.Step.LoginStepDef.close_the_browser()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Close the browser.</h6>
+					<div class="node-step"></div>
 				</li>
 			</ul>
 		</li>
-		<li test-id='15' class='node scenario skip' status='skip'>
-			<div class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>To test the login funtionality of facebook application.</div>
+		<li test-id='15' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>To test the login funtionality of facebook application.</div>
 			<ul class='gc steps'>
-				<li test-id='16' class='gc given skip' status='skip'>
-					<h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given To enter URL and navigate to application.</h6>
-					<div class="node-step">Step undefined</div>
+				<li test-id='16' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="Com.Step.LoginStepDef.to_enter_URL_and_navigate_to_application()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given To enter URL and navigate to application.</h6>
+					<div class="node-step"></div>
 				</li>
-				<li test-id='17' class='gc when skip' status='skip'>
-					<h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When To enter "geetha" and "789".</h6>
-					<div class="node-step">Step undefined</div>
+				<li test-id='17' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="Com.Step.LoginStepDef.to_enter_and(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When To enter "geetha" and "789".</h6>
+					<div class="node-step"></div>
 				</li>
-				<li test-id='18' class='gc then skip' status='skip'>
-					<h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then click the submit button.</h6>
-					<div class="node-step">Step undefined</div>
+				<li test-id='18' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="Com.Step.LoginStepDef.click_the_submit_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then click the submit button.</h6>
+					<div class="node-step"></div>
 				</li>
-				<li test-id='19' class='gc and skip' status='skip'>
-					<h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And To test screenshot.</h6>
-					<div class="node-step">Step undefined</div>
+				<li test-id='19' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="Com.Step.LoginStepDef.to_test_screenshot()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And To test screenshot.</h6>
+					<div class="node-step"></div>
 				</li>
-				<li test-id='20' class='gc then skip' status='skip'>
-					<h6 class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Close the browser.</h6>
-					<div class="node-step">Step undefined</div>
+				<li test-id='20' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="Com.Step.LoginStepDef.close_the_browser()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Close the browser.</h6>
+					<div class="node-step"></div>
 				</li>
 			</ul>
 		</li>
@@ -282,7 +356,133 @@
 	</div>
 	<!-- subview right -->
 </div>
-<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- test view --><!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.WebDriverException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 12, 2021 12:26:54 PM</td>
+										<td class='linked' test-id='4'>Given To enter URL and navigate to application.</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-DD3GB8N', ip: '192.168.43.138', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at Com.Baseclass.library.browserSetUp(library.java:52)
+	at Com.Step.LoginStepDef.to_enter_URL_and_navigate_to_application(LoginStepDef.java:16)
+	at ✽.To enter URL and navigate to application.(file:///C:/Users/Geetha%20Natarajan/git/HyBridFrameWork/HybridSeleniumCucumber1/src/test/resources/Features/testcase.feature:4)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:16034/status] to be available after 20033 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+	at Com.Baseclass.library.browserSetUp(library.java:52)
+	at Com.Step.LoginStepDef.to_enter_URL_and_navigate_to_application(LoginStepDef.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:67)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 48 more
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -308,19 +508,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jan 6, 2021 05:41:28 PM</div>
+					<div class='panel-lead'>Jan 12, 2021 12:26:51 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jan 6, 2021 05:41:31 PM</div>
+			 		<div class='panel-lead'>Jan 12, 2021 12:29:10 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 2s+502ms</div>
+					<div class='panel-lead'>0h 2m 18s+812ms</div>
 				</div>
 			</div>
 		</div>
@@ -333,37 +533,37 @@
 			var statusGroup = {
                 parentCount: 1,
 				passParent: 0,
-				failParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
-				skipParent: 1,
+				skipParent: 0,
 				exceptionsParent: 1,
 				childCount: 3,
-				passChild: 0,
-				failChild: 0,
+				passChild: 2,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
-				skipChild: 3,
+				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 3,
+				exceptionsChild: 1,
 				grandChildCount: 15,
-				passGrandChild: 0,
-				failGrandChild: 0,
+				passGrandChild: 10,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 15,
+				skipGrandChild: 4,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 15,
+				exceptionsGrandChild: 5,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "To test the facebook application.":0.153
+			        "To test the facebook application.":135.664
 			};
 		</script>
 	

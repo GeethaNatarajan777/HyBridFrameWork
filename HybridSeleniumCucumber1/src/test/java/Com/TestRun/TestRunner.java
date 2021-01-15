@@ -1,7 +1,8 @@
 package Com.TestRun;
 
+import org.junit.AfterClass;
 import org.junit.runner.RunWith;
-import org.testng.annotations.AfterClass;
+
 
 import com.vimalselvam.cucumber.listener.Reporter;
 
@@ -18,7 +19,7 @@ import io.cucumber.junit.CucumberOptions;
 			dryRun = false, 
 			features = "src/test/resources/Features/testcase.feature", 
 			glue = {
-					"com.Step" }, 
+					"Com.Step" }, 
 			monochrome = true, 
 			plugin = { "pretty",
 						"html:Reports/cucumber-html-report", 
